@@ -1,6 +1,6 @@
 <?php
 
-namespace TTText;
+namespace TT\TTText;
 
 use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
@@ -26,6 +26,6 @@ class Main extends PluginBase implements Listener{
         $player = $event->getPlayer();
         $level = $player->getLevel();
         $vector = new Vector3(109.5, 15, 126.50);
-        $level->addParticle(new FloatingTextParticle($vector->add(0.5, 0.0, -0.5), TakeTwo . "\n" . Parkour)); 
+        $level->addParticle(new FloatingTextParticle(TakeTwo . "\n" . Parkour)); 
      }
 }
