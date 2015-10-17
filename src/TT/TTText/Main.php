@@ -7,10 +7,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\Player;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\level;
-use pocketmine\level\Position;
-use pocketmine\level\particle\Particle;
-use pocketmine\particle\FloatingTextParticle;
+use pocketmine\level\particle\FloatingTextParticle;
 use pocketmine\math\Vector3;
 
 class Main extends PluginBase implements Listener{
