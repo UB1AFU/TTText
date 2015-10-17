@@ -26,6 +26,6 @@ class Main extends PluginBase implements Listener{
         $player = $event->getPlayer();
         $level = $player->getLevel();
         $vector = new Vector3(109.5, 15, 126.50);
-        $level->addParticle(new FloatingTextParticle(TakeTwo . "\n" . Parkour)); 
+        $level->addParticle(new FloatingTextParticle($vector, "TakeTwo\nParkour"));
      }
 }
