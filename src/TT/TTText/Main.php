@@ -12,7 +12,8 @@ use pocketmine\math\Vector3;
 
 class Main extends PluginBase implements Listener{
 
-
+     public $run = false;
+     
      public function onEnable(){
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info("TTText enabled!");
@@ -23,9 +24,12 @@ class Main extends PluginBase implements Listener{
      }
  
      public function onPlayerJoin(PlayerJoinEvent $event){
-        $player = $event->getPlayer();
-        $level = $player->getLevel();
-        $vector = new Vector3(109.5, 15, 126.50);
-        $level->addParticle(new FloatingTextParticle($vector, "TakeTwo\nParkour"));
+          if (!$this->run) {
+               $player = $event->getPlayer();
+               $level = $player->getLevel();
+               $vector = new Vector3(109.5, 15, 126.50);
+               $level->addParticle(new FloatingTextParticle($vector, "TakeTwo\nParkour"));
+               $this->run = true;
+          }
      }
 }
